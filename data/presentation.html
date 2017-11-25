@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>ARDUINO WORKSHOP</title>
+<!-- 2017-11-22 Wed 20:07 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="Org-mode">
+<meta name="author" content="Karthik kumar Santhanaraj">
+
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style type="text/css">
+/* org mode styles on top of twbs */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-size: 18px;
+    margin-bottom: 105px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 101px;
+    background-color: #f5f5f5;
+}
+
+footer > div {
+    padding: 10px;
+}
+
+footer p {
+    margin: 0 0 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#table-of-contents {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+blockquote p {
+    font-size: 18px;
+}
+
+pre {
+    font-size: 16px;
+}
+
+.footpara {
+    display: inline-block;
+}
+
+figcaption {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+  padding-bottom: 15px;
+}
+
+/* from twbs docs */
+
+.bs-docs-sidebar.affix {
+    position: static;
+}
+@media (min-width: 768px) {
+    .bs-docs-sidebar {
+        padding-left: 20px;
+    }
+}
+
+/* All levels of nav */
+.bs-docs-sidebar .nav > li > a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+}
+.bs-docs-sidebar .nav > li > a:hover,
+.bs-docs-sidebar .nav > li > a:focus {
+    padding-left: 19px;
+    color: #A1283B;
+    text-decoration: none;
+    background-color: transparent;
+    border-left: 1px solid #A1283B;
+}
+.bs-docs-sidebar .nav > .active > a,
+.bs-docs-sidebar .nav > .active:hover > a,
+.bs-docs-sidebar .nav > .active:focus > a {
+    padding-left: 18px;
+    font-weight: bold;
+    color: #A1283B;
+    background-color: transparent;
+    border-left: 2px solid #A1283B;
+}
+
+/* Nav: second level (shown on .active) */
+.bs-docs-sidebar .nav .nav {
+    display: none; /* Hide by default, but at >768px, show it */
+    padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav > li > a:focus {
+    padding-left: 29px;
+}
+.bs-docs-sidebar .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav > .active:focus > a {
+    padding-left: 28px;
+    font-weight: 500;
+}
+
+/* Nav: third level (shown on .active) */
+.bs-docs-sidebar .nav .nav .nav {
+    padding-bottom: 10px;
+}
+.bs-docs-sidebar .nav .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 40px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.bs-docs-sidebar .nav .nav .nav > li > a:hover,
+.bs-docs-sidebar .nav .nav .nav > li > a:focus {
+    padding-left: 39px;
+}
+.bs-docs-sidebar .nav .nav .nav > .active > a,
+.bs-docs-sidebar .nav .nav .nav > .active:hover > a,
+.bs-docs-sidebar .nav .nav .nav > .active:focus > a {
+    padding-left: 38px;
+    font-weight: 500;
+}
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+    .bs-docs-sidebar .nav > .active > ul {
+        display: block;
+    }
+    /* Widen the fixed sidebar */
+    .bs-docs-sidebar.affix,
+    .bs-docs-sidebar.affix-bottom {
+        width: 213px;
+    }
+    .bs-docs-sidebar.affix {
+        position: fixed; /* Undo the static from mobile first approach */
+        top: 20px;
+    }
+    .bs-docs-sidebar.affix-bottom {
+        position: absolute; /* Undo the static from mobile first approach */
+    }
+    .bs-docs-sidebar.affix .bs-docs-sidenav,.bs-docs-sidebar.affix-bottom .bs-docs-sidenav {
+        margin-top: 0;
+        margin-bottom: 0
+    }
+}
+@media (min-width: 1200px) {
+    /* Widen the fixed sidebar again */
+    .bs-docs-sidebar.affix-bottom,
+    .bs-docs-sidebar.affix {
+        width: 263px;
+    }
+}
+</style>
+<script type="text/javascript">
+$(function() {
+    'use strict';
+
+    $('.bs-docs-sidebar li').first().addClass('active');
+
+    $(document.body).scrollspy({target: '.bs-docs-sidebar'});
+
+    $('.bs-docs-sidebar').affix();
+});
+</script>
+</head>
+<body>
+<div id="content" class="container">
+<div class="row"><div class="col-md-9"><h1 class="title">ARDUINO WORKSHOP</h1>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> OVERALL OUTLINE:</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> PRESENTATION LAYOUT:</h3>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> INTRODUCTION</h3>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> EXPLANATION</h3>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> DEMO</h3>
+</div>
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> WHAT ELSE YOU CAN DO WITH THIS&#x2026;</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> INTRODUCTION:</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-0-1" class="outline-4">
+<h4 id="sec-2-0-1"><span class="section-number-4">2.0.1</span> INTRO:</h4>
+<div class="outline-text-4" id="text-2-0-1">
+<p>
+We live in an amazingly high-tech world, surrounded by electronic gizmos and gadgets.
+Because our lives are so infused with electronics, everyone – engineers, educators, 
+entrepreneurs, students, and artists alike – can greatly benefit from learning more 
+about them. Understanding how to read schematics, solder, program, and build circuits 
+instills a unique understanding of the world we live in; not to mention, hacking and 
+making with electronics is just plain fun!
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> WHAT IS A MICROCONTROLLER</h3>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> INSIDE THE MICROCONTROLLER</h3>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> ORIGIN OF ARDUINO</h3>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> WHY ARDUINO</h3>
+</div>
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> SNEAKING INTO THE ARDUINO HARDWARE</h3>
+<div class="outline-text-3" id="text-2-5">
+</div><div id="outline-container-sec-2-5-1" class="outline-4">
+<h4 id="sec-2-5-1"><span class="section-number-4">2.5.1</span> I/O IN THE ARDUINO</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> ARDUINO LED PROJECT:</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> INTRO</h3>
+<div class="outline-text-3" id="text-3-1">
+</div><div id="outline-container-sec-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> Arduino</h4>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> SETUP</h3>
+</div>
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> LOOP</h3>
+</div>
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> SETTING MODE</h3>
+</div>
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> WRITING AND READING</h3>
+</div>
+<div id="outline-container-sec-3-6" class="outline-3">
+<h3 id="sec-3-6"><span class="section-number-3">3.6</span> WHAT CAN YOU DO WITH IT</h3>
+</div>
+<div id="outline-container-sec-3-7" class="outline-3">
+<h3 id="sec-3-7"><span class="section-number-3">3.7</span> HOW ABOUT MAKING SOMETHING(LED) GLOW</h3>
+</div>
+<div id="outline-container-sec-3-8" class="outline-3">
+<h3 id="sec-3-8"><span class="section-number-3">3.8</span> BASIC: LED (APP)</h3>
+</div>
+<div id="outline-container-sec-3-9" class="outline-3">
+<h3 id="sec-3-9"><span class="section-number-3">3.9</span> WIRING DIAGRAM</h3>
+</div>
+<div id="outline-container-sec-3-10" class="outline-3">
+<h3 id="sec-3-10"><span class="section-number-3">3.10</span> CONTROLLING LED</h3>
+</div>
+<div id="outline-container-sec-3-11" class="outline-3">
+<h3 id="sec-3-11"><span class="section-number-3">3.11</span> RGB LED</h3>
+</div>
+<div id="outline-container-sec-3-12" class="outline-3">
+<h3 id="sec-3-12"><span class="section-number-3">3.12</span> WHAT ELSE YOU CAN DO WITH THIS</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> AUTOMATIC ROOM LIGHTING CONTROL:</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> INTRO</h3>
+</div>
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> WHAT IS RESISTOR</h3>
+</div>
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> VARIABLE RESISTORS</h3>
+</div>
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> WHAT YOU CAN DO WITH THEM</h3>
+</div>
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> LDR</h3>
+</div>
+<div id="outline-container-sec-4-6" class="outline-3">
+<h3 id="sec-4-6"><span class="section-number-3">4.6</span> CONTROLLING LIGHT</h3>
+</div>
+<div id="outline-container-sec-4-7" class="outline-3">
+<h3 id="sec-4-7"><span class="section-number-3">4.7</span> WHAT ELSE YOU CAN DO WITH THIS</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> BLUETOOTH-CONTROLLED LIGHTING:</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> INTRO</h3>
+</div>
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> WHAT IS BLUETOOTH</h3>
+</div>
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> HC-05</h3>
+</div>
+<div id="outline-container-sec-5-4" class="outline-3">
+<h3 id="sec-5-4"><span class="section-number-3">5.4</span> CONTROLLING NORMAL LED</h3>
+</div>
+<div id="outline-container-sec-5-5" class="outline-3">
+<h3 id="sec-5-5"><span class="section-number-3">5.5</span> CONTROLLING RBG LED</h3>
+</div>
+<div id="outline-container-sec-5-6" class="outline-3">
+<h3 id="sec-5-6"><span class="section-number-3">5.6</span> WHAT ELSE YOU CAN DO WITH THIS</h3>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> BUILDING A ROBOT:</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+INTRO - SOME SORT OF SENSING IS NEEDED
+SPEED OF SOUND
+    WHAT IS SOUND
+HOW CAN YOU BE SURE. LETS MEASURE IT AND SEE.
+ULTRASONIC SENSOR
+BUILDING A ROBOT WITH SAME CONCEPT
+WHAT ELSE YOU CAN DO WITH THIS
+     ASSISTING VISUALLY IMPAIRED PEOPLE
+     SOLAR PANEL CLEANING ROBOT
+     EGDE AVOIDING ROBOT
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> FACE DETECTION:</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+INTRO - HOW DO YOU FIND A FACE
+SIMPLE FACE DETECTING ALGORITHM
+DETECTING FACES
+WHAT ELSE YOU CAN DO WITH THIS
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> FACE RECOGNITION:</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+INTRO
+HOW TO DO THAT
+RECOGNIZING FACES
+LETS MAKE THIS RECOGNIZE YOU
+WHAT ELSE YOU CAN DO WITH THIS
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> HAND GESTURE RECOGNITION:</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+INTRO
+HOW TO DO THAT
+JUMPING RIGHT INTO THE DEMO
+USING EXTERNAL CAM
+USING KINECT
+WHAT ELSE YOU CAN DO WITH THIS
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> ASSISTIVE ROBOT WITH ALL OF THE ABOVE CAPABILITIES:</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+INTRO - THINGS YOU NEED TO MAKE AN ASSISTIVE ROBOT
+HOW TO DO THAT
+USING VOICE RECOGNITION
+WHAT ELSE YOU CAN DO WITH THIS
+</p>
+
+
+<div class="org-src-container">
+
+<pre class="src src-C++">void setup() {
+    int led = 13;
+    pinMode(led, OUTPUT);
+    digitalWrite(led, HIGH);
+}
+</pre>
+</div>
+</div>
+</div>
+</div><div class="col-md-3"><nav id="table-of-contents">
+<div id="text-table-of-contents" class="bs-docs-sidebar">
+<ul class="nav">
+<li><a href="#sec-1">1. OVERALL OUTLINE:</a>
+<ul class="nav">
+<li><a href="#sec-1-1">1.1. PRESENTATION LAYOUT:</a></li>
+<li><a href="#sec-1-2">1.2. INTRODUCTION</a></li>
+<li><a href="#sec-1-3">1.3. EXPLANATION</a></li>
+<li><a href="#sec-1-4">1.4. DEMO</a></li>
+<li><a href="#sec-1-5">1.5. WHAT ELSE YOU CAN DO WITH THIS&#x2026;</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. INTRODUCTION:</a>
+<ul class="nav">
+<li><a href="#sec-2-1">2.1. WHAT IS A MICROCONTROLLER</a></li>
+<li><a href="#sec-2-2">2.2. INSIDE THE MICROCONTROLLER</a></li>
+<li><a href="#sec-2-3">2.3. ORIGIN OF ARDUINO</a></li>
+<li><a href="#sec-2-4">2.4. WHY ARDUINO</a></li>
+<li><a href="#sec-2-5">2.5. SNEAKING INTO THE ARDUINO HARDWARE</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. ARDUINO LED PROJECT:</a>
+<ul class="nav">
+<li><a href="#sec-3-1">3.1. INTRO</a></li>
+<li><a href="#sec-3-2">3.2. SETUP</a></li>
+<li><a href="#sec-3-3">3.3. LOOP</a></li>
+<li><a href="#sec-3-4">3.4. SETTING MODE</a></li>
+<li><a href="#sec-3-5">3.5. WRITING AND READING</a></li>
+<li><a href="#sec-3-6">3.6. WHAT CAN YOU DO WITH IT</a></li>
+<li><a href="#sec-3-7">3.7. HOW ABOUT MAKING SOMETHING(LED) GLOW</a></li>
+<li><a href="#sec-3-8">3.8. BASIC: LED (APP)</a></li>
+<li><a href="#sec-3-9">3.9. WIRING DIAGRAM</a></li>
+<li><a href="#sec-3-10">3.10. CONTROLLING LED</a></li>
+<li><a href="#sec-3-11">3.11. RGB LED</a></li>
+<li><a href="#sec-3-12">3.12. WHAT ELSE YOU CAN DO WITH THIS</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. AUTOMATIC ROOM LIGHTING CONTROL:</a>
+<ul class="nav">
+<li><a href="#sec-4-1">4.1. INTRO</a></li>
+<li><a href="#sec-4-2">4.2. WHAT IS RESISTOR</a></li>
+<li><a href="#sec-4-3">4.3. VARIABLE RESISTORS</a></li>
+<li><a href="#sec-4-4">4.4. WHAT YOU CAN DO WITH THEM</a></li>
+<li><a href="#sec-4-5">4.5. LDR</a></li>
+<li><a href="#sec-4-6">4.6. CONTROLLING LIGHT</a></li>
+<li><a href="#sec-4-7">4.7. WHAT ELSE YOU CAN DO WITH THIS</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. BLUETOOTH-CONTROLLED LIGHTING:</a>
+<ul class="nav">
+<li><a href="#sec-5-1">5.1. INTRO</a></li>
+<li><a href="#sec-5-2">5.2. WHAT IS BLUETOOTH</a></li>
+<li><a href="#sec-5-3">5.3. HC-05</a></li>
+<li><a href="#sec-5-4">5.4. CONTROLLING NORMAL LED</a></li>
+<li><a href="#sec-5-5">5.5. CONTROLLING RBG LED</a></li>
+<li><a href="#sec-5-6">5.6. WHAT ELSE YOU CAN DO WITH THIS</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. BUILDING A ROBOT:</a></li>
+<li><a href="#sec-7">7. FACE DETECTION:</a></li>
+<li><a href="#sec-8">8. FACE RECOGNITION:</a></li>
+<li><a href="#sec-9">9. HAND GESTURE RECOGNITION:</a></li>
+<li><a href="#sec-10">10. ASSISTIVE ROBOT WITH ALL OF THE ABOVE CAPABILITIES:</a></li>
+</ul>
+</div>
+</nav>
+</div></div></div>
+<footer id="postamble" class="">
+<div><p class="author">Author: Karthik kumar Santhanaraj</p>
+<p class="date">Created: 2017-11-22 Wed 20:07</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org-mode</a> 8.2.10)</p>
+</div>
+</footer>
+</body>
+</html>

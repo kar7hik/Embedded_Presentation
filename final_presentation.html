@@ -1,0 +1,929 @@
+<!doctype html>
+
+
+<!-- Template:  
+     <!-- Title --
+          <div id="" class="step" data-x="" data-y="" data-z=""
+               data-goto-prev="" data-rotate-z="" data-rotate-x=""
+               data-rotate-y="">
+
+          </div>
+          -->
+
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>ARDUINO WORKSHOP | ROBOTICS </title>
+        <meta name="description" content="Embedded Electronics Workshop" />
+        <meta name="author" content="Henrik Ingo" />
+        <link href="css/3D-rotations.css" rel="stylesheet" />
+        <script
+            src="./code-prettify-master/loader/run_prettify.js">
+        </script>
+    </head>
+
+    <body class="impress-not-supported">
+        <div class="fallback-message">
+            <p>Your browser <b>doesn't support the features required</b>
+                by impress.js, so you are presented with a simplified
+                version of this presentation.</p>
+
+            <p>For the best experience please use the latest <b>
+                    Chrome</b>, <b>Safari</b> or <b>Firefox</b>
+                browser.</p>
+        </div>
+
+        <div id="impress" data-transition-duration="1500">
+            <div id="Title" class="step overview0" data-x="1350" data-y="100" data-z="100"
+                 data-scale="3" data-rotate-y="90">
+                <h1>BASICS <br/>OF <br/>ARDUINO</h1>
+            </div>
+
+            <!--
+            <div id="Outline" class="step overview1" data-x="2000" data-y="1200" data-z="3018"
+                 data-scale="2">
+                <h2>OVERALL OUTLINE</h2>
+            </div>
+            -->
+
+
+            <div id="Layout" class="step overview2" data-x="3000" data-y="500" data-z="4018"
+                 data-scale="3" data-rotate-z="90">
+                <br/><br/>
+                <h3>
+                    <p>INTRODUCTION</p>
+                    <p>EXPLANATION</p>
+                    <p>DEMO</p>
+                    <p>WHAT ELSE WE CAN DO WITH THIS</p>
+                </h3>
+            </div>
+
+            <!-- Introduction image slide -->
+
+            <div id="Introduction" class="step" data-x="0" data-y="0" data-z="0"
+                 data-goto-prev="step-8" data-rotate-order="xyz">
+              <p><strong>INTRODUCTION</strong></p>
+
+              <img class="substep" alt="MicroController"
+                   src="./data/lets_start.gif" width="600" height="400">
+              <div class="notes">
+                So the question you might have it in your mind is why learn electroics?
+              </div>
+            </div>
+
+
+            <!-- why learn embedded electronics -->
+            <div id="why_electronics" class="step" data-x="-4000" data-y="0" data-z="2000"
+                 data-goto-prev="Introduction" data-rotate-order="zyx">
+                
+                <h4 class="Heading">WHY LEARN ELECTRONICS</h4>
+                <ul>
+                    <li id="why_electronics_point1" class="substep">Understanding how to read
+                        schematics, solder, program, and build circuits instills a unique
+                        understanding of the world we live in.
+                    </li>
+                </ul>
+                
+                <div class="notes">
+                    <p>
+                        Our lives are so infused with electronics. We rely on gadgets and gizmos
+                        for most of the tasks. We use them for communication, entertainment you
+                        name it.
+                    </p>
+                    <p>
+                        They help us understand the things we use on daily basis.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- What is a MicroController? -->
+
+            <div id="MicroControllers" class="step" data-x="-4500" data-y="500" data-z="2000"
+                 data-goto-prev="why_electronics" data-rotate-z="90" data-rotate-x="0"
+                 data-rotate-y="0">
+                <h4>What is a Microcontroller</h4>
+
+                <ul>
+                    <br/>
+                    <li
+                        class="substep">In a Nutshell, Microcontroller takes an input,
+                        process data according to the instruction written in its memory and
+                        gives the output for controlling other machines and devices.
+                    </li>
+                    <br/>
+                    <li
+                        class="substep">It consists of <b>Memory</b>, <b>a Processor</b>
+                        as well as <b>I/O Interfaces</b>.
+                        
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- What is an ARDUINO -->
+            <div id="Arduino" class="step" data-x="-3500" data-y="-500" data-z="2000"
+                 data-goto-prev="Microcontrollers" data-rotate-z="180" data-rotate-x="0"
+                 data-rotate-y="0">
+                <h4>What is an Arduino?</h4>
+
+                <ul>
+                    <li
+                        class="substep"><strong>Arduino is an open-source electronics prototyping
+                            platform based on flexible, easy-to-use hardware and software. It’s
+                            intended for artists, designers, hobbyists, and anyone interested in
+                            creating interactive objects or environments.
+                        </strong>
+                    </li>
+                </ul>
+
+                <img id="arduino_image" alt="Arduino_Image" src="./data/Arduino.png"
+                     width="400" height="300">
+                
+                <div class="notes">
+                    <p>Explanation</p>
+                    <p>Massimo Banzi</p>
+                    <p>Pub</p>
+                </div>
+            </div>
+            
+            
+            <!-- Why ARDUINO -->
+            <div id="why_arduino" class="step" data-x="-3500" data-y="500" data-z="2000"
+                 data-goto-prev="Arduino" data-rotate-z="360" data-rotate-x="180"
+                 data-rotate-y="0">
+                <h4>Why Arduino?</h4>
+                <br/>
+                <p class="substep"><strong>The Arduino software is easy-to-use for beginners,
+                        yet flexible enough for advanced users.
+                    </strong>
+                </p>
+                
+                <ul>
+                    <li
+                        class="substep"><strong>Inexpensive
+                        </strong>
+                    </li>
+                    <li
+                        class="substep"><strong>Simple, Clear Programming Environment
+                        </strong>
+                    </li>
+                    <li
+                        class="substep"><strong>Open source
+                        </strong>
+                    </li>
+                    <li
+                        class="substep"><strong>Options
+                        </strong>
+                    </li>
+                </ul>
+
+                <div class="notes">
+                    <p>Explanation</p>
+                    <p>Massimo Banzi</p>
+                    <p>Pub</p>
+                    <p>Show the available boards</p>
+                </div>
+
+            </div>
+
+
+            <!-- WHAT CAN WE DO WITH ARDUINO -->
+            <div id="arduino_use" class="step" data-x="-4500" data-y="-500" data-z="2000"
+                 data-goto-prev="why_arduino" data-rotate-z="90" data-rotate-x="180"
+                 data-rotate-y="0">
+                <h4>WHAT CAN WE DO WITH ARDUINO</h4>
+                <table>
+                    <tr>
+                        <td id="led_array">
+                            <img alt="led_array" class="substep" width="280" height="220"
+                                 src="./data/led_array_.gif"/>
+                        </td>
+                        <td id="plant_watering">
+                            <img alt="plant" class="substep" width="280" height="220"
+                                 src="./data/weather.gif"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td id="arduino_robot">
+                            <img alt="arduino_robot" class="substep" width="280" height="220"
+                                 src="./data/robot_remote.gif"/>
+                        </td>
+                        <td id="3d_printer">
+                            <img alt="3d_printer" class="substep" width="280" height="220"
+                                 src="./data/arm_robot_.gif"/>
+                        </td>
+                    </tr>
+                </table>
+                <div class="notes">
+                    
+                </div>
+
+            </div>
+
+
+            <!-- ARDUINO HARDWARE -->
+            <div id="arduino_hardware" class="step" data-x="420" data-y="-70"
+                 data-z="-250" data-rotate-z="45" data-rotate-y="-45"
+                 data-rotate-order="zyx">
+                <p><strong>ARDUINO HARDWARE</strong></p>
+                <img alt="hardware" src="./data/arduino_board.png"
+                     width="580" height="380"/>
+            </div>
+
+
+            <!-- atmega --> 
+            <div id="atmega" class="step" data-x="-4000" data-y="0" data-z="-2000"
+                 data-goto-prev="arduino_hardware" data-rotate-order="zxy">
+                <h4>ATMEGA-328P MICROCONTROLLER</h4>
+                
+                <table>
+                    <tr>
+                        <td id="atmega">
+                            <br/>
+                            <img alt="atmega_image" src="./data/Arduino-Uno-ATmega-328P.jpg"
+                                 width="350" height="280"/>
+                        </td>
+                        <td id="specs">
+                            <p>8-bit microcontroller</p>
+                            <p>32 kB of flash memory</p>
+                            <p>2kB of SRAM</p>
+                            <p>20 GPIO pins</p>
+                            <p>SPI serial port</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <!-- arduino i/o -->
+
+            <div id="arduino_io" class="step" data-x="-4500" data-y="-500" data-z="-2000"
+                 data-goto-prev="atmega" data-rotate-z="90" data-rotate-x="0"
+                 data-rotate-y="0">
+                <h4>Input/Output Pins</h4>
+                <table>
+                    <tr>
+                        <br/>
+                        <td id="digital_io">
+                            <img alt="digital_io" src="./data/digital_io.jpg"
+                                 width="300" height="200"/>
+                        </td>
+                        <td>
+                            <p id="specs_d_io">Digital input/output Pins</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p id="specs_a_io">Analog input/output Pins</p>
+                        </td>
+                        <td id="analog_io">
+                            <img alt="analog_io" src="./data/analog_io.jpg"
+                                 width="300" height="200"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <!-- Power pins -->
+            <div id="power_pins" class="step" data-x="-3500" data-y="500" data-z="-2000"
+                 data-goto-prev="arduino_io" data-rotate-z="180" data-rotate-x="0"
+                 data-rotate-y="0">
+                <h4>POWER PINS</h4><br/>
+
+                <img alt="power_pins" src="./data/power_pins.jpg"
+                     width="550" height="400"/>
+            </div>
+
+
+
+            <!-- PROGRAMMING -->
+            <div id="programming" class="step" data-x="700" data-y="350" data-z="-350"
+                 data-goto-prev="power_pins" data-rotate-z="90" data-rotate-y="-90"
+                 data-rotate-order="zyx">
+                <p><strong>PROGRAMMING</strong></p>
+                <img alt="arduino_ide" src="./data/arduino_ide.png"
+                     width="480" height="520"/>
+            </div>
+
+
+            <!-- basic layout -->
+            <div id="basic_program_layout" class="step" data-x="-5000" data-y="0"
+                 data-z="-50"
+                 data-goto-prev="programming" data-rotate-z="0" data-rotate-x="0"
+                 data-rotate-y="90">
+
+                <h4>BASIC PROGRAM LAYOUT</h4>
+                    <code id="arduino_code" class="prettyprint lang-cc">
+                        void setup() {<br/>
+                        }
+                        <br/>
+                        void loop() {<br/>
+                        }
+                    </code>
+            </div>
+
+
+            <!-- setting up -->
+            <div id="setting_up" class="step" data-x="-5000" data-y="-400"
+                 data-z="-500"
+                 data-goto-prev="basic_program_layout" data-rotate-z="180"
+                 data-rotate-x="90"
+                 data-rotate-y="90">
+
+                <h4>SETUP</h4>
+                <code id="arduino_code" class="prettyprint lang-c">
+                    <br/>pinMode, INPUT, OUTPUT, HIGH, LOW
+                </code>
+                <div
+                    class="substep"><code id="arduino_code" class="prettyprint lang-cc">
+                        <br/>void setup() {<br/>
+                        &emsp;&emsp;pinMode(13, OUTPUT);<br/>
+                        }
+                    </code>
+                </div>
+                
+            </div>
+
+
+            <!-- looping -->
+            <div id="looping" class="step" data-x="-5000" data-y="400"
+                 data-z="400"
+                 data-goto-prev="setting_up" data-rotate-z="270"
+                 data-rotate-x="180"
+                 data-rotate-y="90">
+
+                <h4>LOOPING</h4>
+                <code id="arduino_code" class="prettyprint lang-c">
+                    digitalwrite, digitalRead, analogRead, analogWrite
+                </code>
+                <div
+                    class="substep"><code id="arduino_code" class="prettyprint lang-cc">
+                        <br/>void setup() {<br/>
+                        &emsp;&emsp;pinMode(13, OUTPUT);<br/>
+                        }
+                        <br/>void loop() {<br/>
+                        &emsp;&emsp;digitalWrite(13, HIGH);<br/>
+                        }
+                    </code>
+                </div>
+                
+            </div>
+
+
+            <!-- Introducing Delay -->
+            <div id="introduce_delay" class="step" data-x="-5000" data-y="-400"
+                 data-z="400"
+                 data-goto-prev="looping" data-rotate-z="360"
+                 data-rotate-x="270"
+                 data-rotate-y="270">
+
+                <h4>INTRODUCING DELAY</h4>
+                <code id="arduino_code" class="prettyprint lang-c">
+                    <br/>delay(), delayMicroseconds()
+                </code>
+                <div
+                    class="substep"><code id="arduino_long_code" class="prettyprint lang-cc">
+                        <br/>void setup() {<br/>
+                        &emsp;&emsp;pinMode(13, OUTPUT);<br/>
+                        }
+                        <br/>void loop() {<br/>
+                        &emsp;&emsp;digitalWrite(13, HIGH);<br/>
+                        &emsp;&emsp;delay(1000);<br/>
+                        &emsp;&emsp;digitalWrite(13, HIGH);<br/>
+                        &emsp;&emsp;delay(1000);<br/>
+                        }
+                    </code>
+                </div>
+            </div>
+
+
+            <!-- Using Serial Monitor 
+            <div id="serial_monitor" class="step" data-x="-5000"
+                 data-y="400"
+                 data-z="-500"
+                 data-goto-prev="introducing_delay" data-rotate-z="360"
+                 data-rotate-x="90"
+                 data-rotate-y="270">
+
+                <h4>USING SERIAL MONITOR</h4>
+                <code id="arduino_code" class="prettyprint lang-c">
+                    Serial.begin(9600), Serial.println, Serial.print
+                </code>
+                <div
+                    class="substep"><code id="arduino_long_code" class="prettyprint lang-cc">
+                        <br/>void setup() {<br/>
+                        &emsp;&emsp;Serial.begin(9600);<br/>
+                        &emsp;&emsp;pinMode(13, OUTPUT);<br/>
+                        }
+                        <br/>void loop() {<br/>
+                        &emsp;&emsp;Serail.println("LED ON");<br/>
+                        &emsp;&emsp;digitalWrite(13, HIGH);<br/>
+                        &emsp;&emsp;delay(1000);<br/>
+                        &emsp;&emsp;Serail.println("LED OFF");<br/>
+                        &emsp;&emsp;digitalWrite(13, LOW);<br/>
+                        &emsp;&emsp;delay(1000);<br/>
+                        }
+                    </code>
+                </div>
+            </div>
+            -->
+
+
+            <!-- stairs -->
+            <div id="stairs" class="step" data-x="-5000"
+                 data-y="400"
+                 data-z="-500"
+                 data-goto-prev="introducing_delay" data-rotate-z="360"
+                 data-rotate-x="90"
+                 data-rotate-y="270">
+
+                <img class="substep" id="image" src="./data/Kungupanda2.gif"
+                     width="600" height="600"/>
+            </div>
+
+
+
+            <!-- AUTOMATIC LIGHTING CONTROL SYSTEM -->
+            <div id="ldr" class="step" data-x="422" data-y="780"
+                 data-z="-250" data-rotate-z="135"
+                 data-rotate-y="-135" data-rotate-order="zyx">
+                <p><strong>AUTOMATIC LIGHTING CONTROL SYSTEM</strong></p>
+                <img alt="ldr-arduino" src="./data/arduino_ldr_.jpg"
+                     width="520" height="400"/>
+            </div>
+
+
+            <!-- ldr explanation -->
+            <div id="ldr_explanation" class="step"
+                 data-x="-5000"
+                 data-y="2500"
+                 data-z="-50"
+                 data-goto-prev="ldr" data-rotate-z="0" data-rotate-x="0"
+                 data-rotate-y="90">
+
+                <h4>VARIABLE RESISTORS</h4><br/>
+                <img alt="ldr_animation" id="ldr_animation" src="./data/ldr1.gif"
+                     width="400" height="400"/>
+            </div>
+
+
+
+            <!-- automating_ldr -->
+            <div id="automating_ldr" class="step"
+                 data-x="-5000"
+                 data-y="2100"
+                 data-z="-500"
+                 data-goto-prev="ldr_explanation" data-rotate-z="180"
+                 data-rotate-x="90"
+                 data-rotate-y="90">
+
+                <h4>AUTOMATING</h4>
+                <p><strong><br/>
+                    This system works by sensing the intensity of light
+                    in its environment. The sensor that can be used
+                    to detect light is an LDR.
+                    </strong>
+                </p>
+            </div>
+
+
+            <!-- ldr_circuit -->
+            <div id="ldr_circuit" class="step"
+                 data-x="-5000"
+                 data-y="2100"
+                 data-z="400"
+                 data-goto-prev="automating_ldr" data-rotate-z="180"
+                 data-rotate-x="270"
+                 data-rotate-y="90">
+
+                <h4>CIRCUIT</h4><br/>
+
+                <img alt="ldr_circuit" src="./data/ldr_arduino_circuit.jpg"
+                     width="600" height="350"/>
+            </div>
+
+
+            <!-- ldr_program -->
+            <div id="ldr_program" class="step"
+                 data-x="-5000"
+                 data-y="2900"
+                 data-z="-500"
+                 data-goto-prev="ldr_circuit" data-rotate-z="180"
+                 data-rotate-x="270"
+                 data-rotate-y="90">
+
+                <h4>PROGRAM</h4>
+
+                <div
+                    class="substep"><code id="arduino_long_code"
+                                          class="prettyprint lang-cc">
+                        int ledPin = 3;<br/>
+                        int photocell = 0;<br/>
+                        
+                        <br/>void setup() {<br/>
+                        &emsp;&emsp;pinMode(ledpin, OUTPUT);<br/>
+                        &emsp;&emsp;Serial.begin(9600);<br/>
+                        }
+                        
+                        <br/>void loop() {<br/>
+                        &emsp;&emsp;photocell = (analogRead(0)/4);<br/> 
+                        &emsp;&emsp;analogWrite(ledPin, photocell);<br/>
+                        &emsp;&emsp;Serial.print(photocell);<br/>
+                        &emsp;&emsp;delay(20);<br/>
+                        }
+                    </code>
+                </div>
+
+            </div>
+
+
+
+            <!-- bluetooth_control -->
+            <div id="bluetooth_control" class="step"
+                 data-x="0"
+                 data-y="702"
+                 data-z="0"
+                 data-rotate-z="180"
+                 data-rotate-y="-180"
+                 data-rotate-order="zyx"
+                 data-goto-prev="ldr_program">
+
+                <p><strong>BLUETOOTH CONTROL</strong></p>
+
+                <img alt="bluetooth" id="bl" src="./data/bluetooth.gif"
+                     width="520" height="420"/>
+            </div>
+
+
+            <!-- sound -->
+            <div id="sound" class="step"
+                 data-x="379"
+                 data-y="780"
+                 data-z="270"
+                 data-rotate-z="135"
+                 data-rotate-y="-225"
+                 data-rotate-order="zyx"
+                 data-goto-prev="bluetooth_control">
+              
+              <p><strong>SOUND</strong></p>
+              <img alt="sound" id="sound_image" src="./data/sound_ear.gif"
+                   width="520" height="420"/>
+
+            </div>
+
+
+            <!-- what_is_sound -->
+            <div id="what_is_sound" class="step"
+                 data-x="3000"
+                 data-y="2200"
+                 data-z="3000"
+                 data-rotate-z="90"
+                 data-rotate-y="-270"
+                 data-rotate-order="zyx"
+                 data-goto-prev="sound">
+
+              <h4>WHAT IS SOUND</h4><br/>
+              <img alt="sound" id="sound_image" src="./data/sound-gif-rainbow.gif"
+                   width="520" height="420"/>
+            </div>
+
+
+            <!-- speed_of_sound -->
+            <div id="speed_of_sound" class="step"
+                 data-x="2650"
+                 data-y="1850"
+                 data-z="3000"
+                 data-rotate-z="-180"
+                 data-rotate-y="-270"
+                 data-rotate-order="zyx"
+                 data-goto-prev="what_is_sound">
+
+              <h4>SPEED OF SOUND</h4><br/>
+              <img alt="sound" id="sound_image" src="./data/speaker.gif"
+                   width="600" height="420"/>
+
+              <div class="notes">
+                <p>So what if a say that the speed of sound is 330m/s ?</p>
+                <p>Will you accept it?</p>
+              </div>
+            </div>
+
+
+            <!-- hc_sr04 -->
+            <div id="hc_sr04" class="step"
+                 data-x="3000"
+                 data-y="1850"
+                 data-z="2650"
+                 data-rotate-x="0"
+                 data-rotate-z="-90"
+                 data-rotate-y="-180"
+                 data-rotate-order="zyx"
+                 data-goto-prev="speed_of_sound">
+              <h4>HC-SR04</h4><br/>
+              <img alt="sound" id="sound_image" src="./data/hcsr04.jpeg"
+                   width="500" height="450"/>
+
+              <div class="notes">
+              </div>
+
+            </div>
+
+            
+            <!-- hc_sr04_working -->
+            <div id="hc_sr04_working" class="step"
+                 data-x="3350"
+                 data-y="1850"
+                 data-z="3000"
+                 data-rotate-x="90"
+                 data-rotate-z="-270"
+                 data-rotate-y="-180"
+                 data-rotate-order="zyx"
+                 data-goto-prev="hc_sr04">
+              <h4>HC-SR04 WORKING</h4>
+              <video id="sound_video" 
+                     width="500" height="450" controls autoplay="" loop>
+                <source src="./data/ultrasonic-sensor.mp4" type="video/mp4"/>
+              </video>
+             
+              <div class="notes">
+              </div>
+
+            </div>
+
+
+
+            <!-- measuring_speed_of_sound -->
+            <div id="measuring_speed_of_sound" class="step"
+                 data-x="3000"
+                 data-y="1500"
+                 data-z="3000"
+                 data-rotate-x="90"
+                 data-rotate-z="-360"
+                 data-rotate-y="-180"
+                 data-rotate-order="zyx"
+                 data-goto-prev="hc_sr04_working">
+              <h4>MEASURING SPEED OF SOUND</h4><br/>
+              <img alt="sound" id="sound_image" src="./data/hcsr04_sketch.jpg"
+                   width="550" height="350"/>
+             
+              <div class="notes">
+              </div>
+            </div>
+
+
+            <!-- lets_make_a_robot -->
+            <div id="lets_make_a_robot" class="step"
+                 data-x="3000"
+                 data-y="1850"
+                 data-z="3350"
+                 data-rotate-x="180"
+                 data-rotate-z="-90"
+                 data-rotate-y="-180"
+                 data-rotate-order="xyz"
+                 data-goto-prev="measuring_speed_of_sound">
+              <h4>LETS MAKE A ROBOT</h4><br/>
+              <img alt="sound" id="sound_image" src="./data/make_robot.gif"
+                   width="550" height="400"/>
+             
+              <div class="notes">
+              </div>
+            </div>
+
+
+            <!-- what_else_sound -->
+            <div id="what_else_sound" class="step"
+                 data-x="5000"
+                 data-y="1500"
+                 data-z="3000"
+                 data-rotate-x="90"
+                 data-rotate-z="-360"
+                 data-rotate-y="-180"
+                 data-rotate-order="zyx"
+                 data-goto-prev="lets_make_a_robot">
+              <br/><h5>WHAT ELSE CAN WE DO WITH THIS</h5><br/>
+             
+              <div class="notes">
+              </div>
+            </div>
+
+
+
+            <!-- wall avoidance -->
+            <div id="wall_avoidance" class="step"
+                 data-x="5000"
+                 data-y="2200"
+                 data-z="3000"
+                 data-rotate-z="90"
+                 data-rotate-y="-270"
+                 data-rotate-order="zyx"
+                 data-goto-prev="what_else_sound">
+
+              <h4>WALL AVOIDANCE</h4>
+              <img alt="sound" id="sound_image" src="./data/obstacle_avoider.gif"
+                   width="520" height="450"/>
+            </div>
+
+
+            <!-- edge_avoidance -->
+            <div id="edge_avoidance" class="step"
+                 data-x="4650"
+                 data-y="1850"
+                 data-z="3000"
+                 data-rotate-z="-180"
+                 data-rotate-y="-270"
+                 data-rotate-order="zyx"
+                 data-goto-prev="wall_avoidance">
+
+              <h4>EDGE AVOIDER</h4>
+              <img alt="sound" id="sound_image" src="./data/edge_avoider.gif"
+                   width="600" height="550"/>
+
+              <div class="notes">
+                <p>So what if a say that the speed of sound is 330m/s ?</p>
+                <p>Will you accept it?</p>
+              </div>
+            </div>
+
+
+            <!-- maze_solver -->
+            <div id="maze_solver" class="step"
+                 data-x="5000"
+                 data-y="1850"
+                 data-z="2650"
+                 data-rotate-x="0"
+                 data-rotate-z="-90"
+                 data-rotate-y="-180"
+                 data-rotate-order="zyx"
+                 data-goto-prev="edge_avoidance">
+              <h4>MAZE SOLVER</h4>
+              <img alt="sound" id="sound_image" src="./data/maze_solver.gif"
+                   width="550" height="500"/>
+
+              <div class="notes">
+              </div>
+
+            </div>
+
+            
+            <!-- cleaning_robot -->
+            <div id="cleaning_robot" class="step"
+                 data-x="5350"
+                 data-y="1850"
+                 data-z="3000"
+                 data-rotate-x="90"
+                 data-rotate-z="-270"
+                 data-rotate-y="-180"
+                 data-rotate-order="zyx"
+                 data-goto-prev="hc_sr04">
+              <h4>CLEANING ROBOT</h4>
+              <img id="sound_image" src="./data/cleaning_robot.gif"
+                     width="500" height="450" 
+              />
+             
+              <div class="notes">
+              </div>
+
+            </div>
+
+
+            <!-- face_detection -->
+            <div id="face_detection" class="step"
+                 data-x="700"
+                 data-y="350"
+                 data-z="350"
+                 data-rotate-z="90"
+                 data-rotate-y="-270"
+                 data-rotate-order="zyx"
+                 data-goto-prev="cleaning_robot">
+                <p><strong>FACE DETECTION <br/> AND <br/> RECOGNITION</strong></p>
+
+                <img id="face_image" src="./data/face_detect.png"
+                     width="400" height="350" 
+                     />
+            </div>
+
+
+            <!-- face_detect_viola -->
+            <div id="face_detect_viola" class="step"
+                 data-x="3350"
+                 data-y="-850"
+                 data-z="3000"
+                 data-rotate-x="90"
+                 data-rotate-z="-270"
+                 data-rotate-y="-180"
+                 data-rotate-order="zyx"
+                 data-goto-prev="face_detection">
+              <h4>IN A NUTSHELL</h4>
+
+              <img class="substep" id="face_image" src="./data/face_detection.png"
+                     width="550" height="450" 
+                     />
+
+              <div class="notes">
+              </div>
+            </div>
+
+
+
+            <!-- face_detection_demo --> 
+            <div id="face_detection_demo" class="step"
+                 data-x="3000"
+                 data-y="-850"
+                 data-z="3350"
+                 data-rotate-x="0"
+                 data-rotate-z="0"
+                 data-rotate-y="0"
+                 data-rotate-order="zyx"
+                 data-goto-prev="face_detect_viola">
+
+              <h5>DEMO</h5>
+            </div>
+
+            <!-- face_recognition -->
+            <div id="face_recognition" class="step"
+                 data-x="3000"
+                 data-y="-500"
+                 data-z="3000"
+                 data-rotate-x="90"
+                 data-rotate-z="180"
+                 data-rotate-y="-270"
+                 data-rotate-order="zyx"
+                 data-goto-prev="face_detection_demo">
+
+              <h4>FACE RECOGNITION</h4><br/>
+              <img alt="face" id="face_image" src="./data/who_am_i.gif"
+                   width="600" height="450"/>
+
+              <div class="notes">
+              </div>
+            </div>
+
+
+            <!-- face_recognition_demo -->
+            <div id="face_recognition_demo" class="step"
+                 data-x="3000"
+                 data-y="-850"
+                 data-z="2650"
+                 data-rotate-x="0"
+                 data-rotate-z="-90"
+                 data-rotate-y="-180"
+                 data-rotate-order="zyx"
+                 data-goto-prev="face_recognition">
+              <h5>DEMO</h5>
+
+              <div class="notes">
+              </div>
+
+            </div>
+
+            
+            <!-- what_else_face -->
+            <div id="what_else_face" class="step"
+                 data-x="2650"
+                 data-y="-850"
+                 data-z="3000"
+                 data-rotate-x="90"
+                 data-rotate-z="-270"
+                 data-rotate-y="-180"
+                 data-rotate-order="zyx"
+                 data-goto-prev="face_recognition_demo">
+              <h5>WHAT ELSE CAN WE DO</h5>
+              
+             
+              <div class="notes">
+              </div>
+
+            </div>
+
+
+            <div id="step-8" class="step"
+                 data-x="379"
+                 data-y="-70"
+                 data-z="270"
+                 data-rotate-z="45"
+                 data-rotate-y="-315"
+                 data-rotate-order="zyx"
+                 data-goto-next="step-1">
+              <br/><img class="substep" id="image" src="./data/giphy.gif"
+                        width="320" height="250"/>
+              <img class="substep" id="image" src="./data/mice_drop.gif"
+                        width="320" height="300"/>
+            </div>
+        </div>
+
+        <div id="impress-toolbar"></div>
+        <div id="impress-help"></div>
+
+        <script type="text/javascript" src="./impress.js"></script>
+        <script>
+            impress().init(); 
+        </script>
+
+    </body>
+</html>
